@@ -1,0 +1,22 @@
+ekf_localizer:
+  ros__parameters:
+    gps_origin_lat: 43.4643        # Waterloo, ON — update to your field
+    gps_origin_lon: -80.5204
+    publish_rate_hz: 50.0
+
+crop_row_detector:
+  ros__parameters:
+    publish_debug_image: true
+    roi_top_fraction: 0.5
+    hough_threshold: 60
+    min_line_length: 80
+    max_line_gap: 25
+    camera_height_m: 0.55
+
+row_following_planner:
+  ros__parameters:
+    target_speed_mps: 0.5
+    stanley_gain_k: 1.2
+    max_steer_rad: 0.52            # ~30°
+    speed_softener: 0.3
+    row_lost_timeout_s: 1.5
